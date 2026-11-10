@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Nabil | Portofolio MPLB</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Tailwind Configuration for Warm Neutral Palette -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              50: '#FAF8F5',
+              100: '#F5F0EB',
+              200: '#EBE1D7',
+              300: '#DDD0C1',
+            },
+            mocha: {
+              400: '#A89280',
+              500: '#8C7462',
+              600: '#705B4B',
+            },
+            espresso: {
+              800: '#3A2E2B',
+              900: '#231B19',
+            },
+            terracotta: {
+              500: '#C86D51',
+              600: '#B0593D',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-cream-50 text-espresso-800 font-sans antialiased selection:bg-terracotta-500 selection:text-white">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-cream-50/80 backdrop-blur-md border-b border-cream-200/60 transition-all duration-300" id="navbar">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo / Name -->
+      <a href="#hero" class="font-serif text-xl font-bold tracking-tight text-espresso-900 group">
+        M.<span class="text-terracotta-500 transition-colors group-hover:text-mocha-600">Nabil</span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="#hero" class="text-espresso-800 hover:text-terracotta-500 transition-colors">Beranda</a>
+        <a href="#about" class="text-espresso-800 hover:text-terracotta-500 transition-colors">Tentang</a>
+        <a href="#skills" class="text-espresso-800 hover:text-terracotta-500 transition-colors">Keahlian</a>
+        <a href="#projects" class="text-espresso-800 hover:text-terracotta-500 transition-colors">Proyek</a>
+        <a href="#contact" class="text-espresso-800 hover:text-terracotta-500 transition-colors">Kontak</a>
+      </div>
+
+      <!-- CTA Button Navbar -->
+      <div class="hidden md:block">
+        <a href="#contact" class="px-5 py-2.5 rounded-full bg-espresso-900 text-cream-50 text-xs font-semibold tracking-wider uppercase hover:bg-terracotta-500 transition-all duration-300 shadow-sm hover:shadow">
+          Hubungi Saya
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="menu-btn" class="md:hidden text-espresso-900 focus:outline-none p-2" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-cream-100 border-b border-cream-200 px-6 py-6 space-y-4">
+      <a href="#hero" class="mobile-link block text-base font-medium text-espresso-900 hover:text-terracotta-500">Beranda</a>
+      <a href="#about" class="mobile-link block text-base font-medium text-espresso-900 hover:text-terracotta-500">Tentang</a>
+      <a href="#skills" class="mobile-link block text-base font-medium text-espresso-900 hover:text-terracotta-500">Keahlian</a>
+      <a href="#projects" class="mobile-link block text-base font-medium text-espresso-900 hover:text-terracotta-500">Proyek</a>
+      <a href="#contact" class="mobile-link block text-base font-medium text-espresso-900 hover:text-terracotta-500">Kontak</a>
+      <div class="pt-2">
+        <a href="#contact" class="mobile-link inline-block w-full text-center py-3 rounded-full bg-espresso-900 text-cream-50 text-xs font-semibold uppercase tracking-wider">
+          Hubungi Saya
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. HERO SECTION -->
+  <section id="hero" class="min-h-screen pt-28 pb-16 flex items-center justify-center px-6 relative overflow-hidden">
+    <!-- Subtle Gradient Background Elements -->
+    <div class="absolute -top-32 -right-32 w-96 h-96 bg-cream-200/50 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-mocha-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <!-- Profile Image & Badge -->
+      <div class="md:col-span-5 flex justify-center order-1 md:order-2">
+        <div class="relative">
+          <div class="w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden bg-cream-200 shadow-xl border border-cream-300/50 relative">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" 
+                 alt="Muhammad Nabil" 
+                 class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out">
+          </div>
+          <!-- Decorative Frame Overlay -->
+          <div class="absolute -inset-3 border border-mocha-400/30 rounded-3xl -z-10 pointer-events-none"></div>
+          <!-- Badge -->
+          <div class="absolute -bottom-4 -left-4 bg-cream-100 border border-cream-300 text-espresso-900 px-4 py-3 rounded-xl shadow-lg flex items-center space-x-3">
+            <div class="w-2.5 h-2.5 rounded-full bg-terracotta-500 animate-pulse"></div>
+            <span class="text-xs font-semibold tracking-wide">MPLB Specialist</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Introduction -->
+      <div class="md:col-span-7 space-y-6 order-2 md:order-1 text-center md:text-left">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-cream-200/60 border border-cream-300 text-mocha-600 text-xs font-medium uppercase tracking-widest">
+          <span>Portofolio Resmi</span>
+        </div>
+        
+        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-espresso-900">
+          Muhammad Nabil
+        </h1>
+        
+        <p class="text-base sm:text-lg text-mocha-600 leading-relaxed font-light">
+          Hallo, selamat datang di website portofolio saya, website ini dibuat untuk saya menaruh seluruh project yang saya buat.
+        </p>
+
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+          <a href="#projects" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-espresso-900 text-cream-50 text-sm font-semibold tracking-wide hover:bg-terracotta-500 transition-all duration-300 shadow-md hover:shadow-lg text-center">
+            Lihat Project Saya
+          </a>
+          <a href="#about" class="w-full sm:w-auto px-7 py-3.5 rounded-full border border-mocha-400/40 text-espresso-900 text-sm font-semibold tracking-wide hover:bg-cream-200/50 transition-all duration-300 text-center">
+            Pelajari Lebih Lanjut
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ABOUT SECTION -->
+  <section id="about" class="py-24 px-6 bg-cream-100/60 border-y border-cream-200/70">
+    <div class="max-w-4xl mx-auto space-y-12">
+      <!-- Section Header -->
+      <div class="text-center space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-widest text-terracotta-500">Tentang Saya</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso-900">Latar Belakang & Pendidikan</h2>
+        <div class="w-12 h-0.5 bg-mocha-400 mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Content Box -->
+      <div class="bg-cream-50 rounded-2xl p-8 sm:p-10 border border-cream-200 shadow-sm space-y-8">
+        <p class="text-espresso-800 leading-relaxed text-base sm:text-lg font-light text-center sm:text-left">
+          Saat ini saya sedang menempuh pendidikan sebagai siswa di <strong class="font-semibold text-espresso-900">SMK CYBER MEDIA</strong>, mengambil jurusan <strong class="font-semibold text-terracotta-500">MPLB (Manajemen Perkantoran Dan Layanan Bisnis)</strong>. Saya memiliki ketertarikan tinggi terhadap efisiensi tata kelola administrasi modern, pengolahan data dokumen bisnis, serta komunikasi profesional.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-cream-200/80">
+          <div class="flex items-start space-x-4">
+            <div class="w-10 h-10 rounded-xl bg-cream-200 flex items-center justify-center text-espresso-900 shrink-0">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-bold text-espresso-900 uppercase tracking-wider">Institusi</h3>
+              <p class="text-mocha-600 text-sm mt-1">SMK CYBER MEDIA</p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="w-10 h-10 rounded-xl bg-cream-200 flex items-center justify-center text-espresso-900 shrink-0">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div>
+              <h3 class="text-sm font-bold text-espresso-900 uppercase tracking-wider">Kompetensi Keahlian</h3>
+              <p class="text-mocha-600 text-sm mt-1">MPLB (Manajemen Perkantoran & Layanan Bisnis)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SKILLS SECTION -->
+  <section id="skills" class="py-24 px-6">
+    <div class="max-w-5xl mx-auto space-y-16">
+      <!-- Section Header -->
+      <div class="text-center space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-widest text-terracotta-500">Keahlian</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso-900">Kompetensi & Keterampilan</h2>
+        <div class="w-12 h-0.5 bg-mocha-400 mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Skills Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Microsoft Word -->
+        <div class="bg-cream-100/50 p-6 rounded-2xl border border-cream-200 hover:border-mocha-400/50 transition-all duration-300 group hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-xl bg-cream-200 text-espresso-900 flex items-center justify-center text-xl mb-5 group-hover:bg-espresso-900 group-hover:text-cream-50 transition-colors">
+            <i class="fa-regular fa-file-word"></i>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-espresso-900">Microsoft Word</h3>
+          <p class="text-xs text-mocha-600 mt-2 leading-relaxed">Penyusunan dokumen formal, pembuatan surat niaga/dinas, serta pemformatan laporan profesional.</p>
+        </div>
+
+        <!-- Microsoft Excel -->
+        <div class="bg-cream-100/50 p-6 rounded-2xl border border-cream-200 hover:border-mocha-400/50 transition-all duration-300 group hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-xl bg-cream-200 text-espresso-900 flex items-center justify-center text-xl mb-5 group-hover:bg-espresso-900 group-hover:text-cream-50 transition-colors">
+            <i class="fa-regular fa-file-excel"></i>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-espresso-900">Microsoft Excel</h3>
+          <p class="text-xs text-mocha-600 mt-2 leading-relaxed">Pengolahan data administrasi, rekapitulasi numerik, rumus dasar statistik, dan pembuatan grafik spreadsheet.</p>
+        </div>
+
+        <!-- Microsoft PowerPoint -->
+        <div class="bg-cream-100/50 p-6 rounded-2xl border border-cream-200 hover:border-mocha-400/50 transition-all duration-300 group hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-xl bg-cream-200 text-espresso-900 flex items-center justify-center text-xl mb-5 group-hover:bg-espresso-900 group-hover:text-cream-50 transition-colors">
+            <i class="fa-regular fa-file-powerpoint"></i>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-espresso-900">PowerPoint</h3>
+          <p class="text-xs text-mocha-600 mt-2 leading-relaxed">Desain slide presentasi bisnis yang estetik, rapi, dan mudah dipahami untuk publikasi materi.</p>
+        </div>
+
+        <!-- Komunikasi -->
+        <div class="bg-cream-100/50 p-6 rounded-2xl border border-cream-200 hover:border-mocha-400/50 transition-all duration-300 group hover:-translate-y-1">
+          <div class="w-12 h-12 rounded-xl bg-cream-200 text-espresso-900 flex items-center justify-center text-xl mb-5 group-hover:bg-espresso-900 group-hover:text-cream-50 transition-colors">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-espresso-900">Komunikasi Interaktif</h3>
+          <p class="text-xs text-mocha-600 mt-2 leading-relaxed">Kemampuan komunikasi lisan & tertulis yang efektif dalam Bahasa Indonesia dan Bahasa Inggris dasar/bisnis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PROJECT SECTION -->
+  <section id="projects" class="py-24 px-6 bg-cream-100/60 border-y border-cream-200/70">
+    <div class="max-w-6xl mx-auto space-y-16">
+      <!-- Section Header -->
+      <div class="text-center space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-widest text-terracotta-500">Portofolio Kinerja</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso-900">Project Yang Dikerjakan</h2>
+        <div class="w-12 h-0.5 bg-mocha-400 mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="bg-cream-50 rounded-2xl overflow-hidden border border-cream-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+          <div class="h-48 bg-cream-200 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" 
+                 alt="Sistem Arsip Digital" 
+                 class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <span class="text-[10px] uppercase font-bold tracking-wider text-terracotta-500 bg-cream-200/60 px-2.5 py-1 rounded-md">Manajemen Perkantoran</span>
+              <h3 class="font-serif font-bold text-lg text-espresso-900">Sistem Tata Kelola Arsip Perusahaan</h3>
+              <p class="text-xs text-mocha-600 leading-relaxed">Perancangan sistem kearsipan fisik & digital berbasis korespondensi standar operasional MPLB.</p>
+            </div>
+            <div class="pt-2 border-t border-cream-200/60 flex items-center justify-between text-xs font-medium text-espresso-800">
+              <span>MS Office / Documentation</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-mocha-400"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-cream-50 rounded-2xl overflow-hidden border border-cream-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+          <div class="h-48 bg-cream-200 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" 
+                 alt="Rekapitulasi Excel" 
+                 class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <span class="text-[10px] uppercase font-bold tracking-wider text-terracotta-500 bg-cream-200/60 px-2.5 py-1 rounded-md">Pengolahan Data</span>
+              <h3 class="font-serif font-bold text-lg text-espresso-900">Dashboard Rekap Inventaris & Anggaran</h3>
+              <p class="text-xs text-mocha-600 leading-relaxed">Penyusunan tabel rekapitulasi data keuangan dan sarana prasarana menggunakan fitur formula Excel.</p>
+            </div>
+            <div class="pt-2 border-t border-cream-200/60 flex items-center justify-between text-xs font-medium text-espresso-800">
+              <span>Microsoft Excel</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-mocha-400"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-cream-50 rounded-2xl overflow-hidden border border-cream-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+          <div class="h-48 bg-cream-200 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop" 
+                 alt="Presentasi Bisnis" 
+                 class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <span class="text-[10px] uppercase font-bold tracking-wider text-terracotta-500 bg-cream-200/60 px-2.5 py-1 rounded-md">Layanan Bisnis</span>
+              <h3 class="font-serif font-bold text-lg text-espresso-900">Presentation Deck Layanan Pelanggan</h3>
+              <p class="text-xs text-mocha-600 leading-relaxed">Materi visual komunikasi interaktif untuk pelatihan standar pelayanan administrasi perkantoran.</p>
+            </div>
+            <div class="pt-2 border-t border-cream-200/60 flex items-center justify-between text-xs font-medium text-espresso-800">
+              <span>MS PowerPoint</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-mocha-400"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CONTACT ME SECTION -->
+  <section id="contact" class="py-24 px-6">
+    <div class="max-w-5xl mx-auto space-y-16">
+      <!-- Section Header -->
+      <div class="text-center space-y-3">
+        <span class="text-xs font-semibold uppercase tracking-widest text-terracotta-500">Hubungi Saya</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-espresso-900">Mari Terhubung</h2>
+        <div class="w-12 h-0.5 bg-mocha-400 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Instagram Card -->
+        <a href="https://instagram.com/nabil_lingkup_dunia" target="_blank" rel="noopener noreferrer" 
+           class="bg-cream-100/60 p-8 rounded-2xl border border-cream-200 text-center hover:bg-cream-200/50 hover:border-mocha-400/40 transition-all duration-300 group">
+          <div class="w-14 h-14 mx-auto rounded-full bg-cream-200 flex items-center justify-center text-2xl text-espresso-900 mb-4 group-hover:bg-terracotta-500 group-hover:text-cream-50 transition-colors">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-mocha-600">Instagram</h3>
+          <p class="font-serif font-bold text-lg text-espresso-900 mt-1">@nabil_lingkup_dunia</p>
+          <span class="inline-block text-[11px] text-terracotta-500 font-semibold mt-3 group-hover:underline">Kunjungi Profil &rarr;</span>
+        </a>
+
+        <!-- WhatsApp Card -->
+        <a href="https://wa.me/6283131099780" target="_blank" rel="noopener noreferrer" 
+           class="bg-cream-100/60 p-8 rounded-2xl border border-cream-200 text-center hover:bg-cream-200
